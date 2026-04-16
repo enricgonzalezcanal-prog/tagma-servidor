@@ -27,4 +27,4 @@ def ping():
     return jsonify({"ok": True})
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5680)
+    app.run(host="127.0.0.1", port=int(__import__("os").environ.get("PORT", 5680)))
